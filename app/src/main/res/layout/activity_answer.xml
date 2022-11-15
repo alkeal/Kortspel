@@ -6,24 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".AnswerActivity">
 
+
     <ImageView
         android:id="@+id/imageRightView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/imageWrongView"
+        android:layout_width="223dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="200dp"
+        android:background="#FAF9F9"
+        android:layerType="none"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_wrapBehaviorInParent="included"
+        app:srcCompat="@drawable/th_3757860760" />
 
     <ImageView
         android:id="@+id/imageWrongView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
+        android:layout_width="207dp"
+        android:layout_height="226dp"
+        android:layout_marginBottom="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/_3_512_2844619269" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
