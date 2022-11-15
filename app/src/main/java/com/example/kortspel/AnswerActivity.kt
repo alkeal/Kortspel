@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 
 class AnswerActivity : AppCompatActivity() {
@@ -46,6 +47,7 @@ class AnswerActivity : AppCompatActivity() {
 
 
    }
+
 
 }
 

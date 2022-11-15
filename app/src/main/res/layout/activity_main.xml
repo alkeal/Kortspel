@@ -10,18 +10,20 @@
         android:id="@+id/buttonHigher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="576dp"
         android:text="Higher?"
         app:layout_constraintEnd_toStartOf="@+id/buttonLower"
+        app:layout_constraintHorizontal_bias="0.329"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonLower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="76dp"
+        android:layout_width="94dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="576dp"
+        android:layout_marginEnd="68dp"
         android:text="Lower?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,18 +32,23 @@
         android:id="@+id/textAppNameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="448dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/gothic_a1_semibold"
+        android:lineSpacingExtra="20sp"
         android:text="Higher? Lower?"
-        app:layout_constraintBottom_toTopOf="@+id/buttonHigher"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageCardView"
         android:layout_width="352dp"
         android:layout_height="349dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAppNameView"
         app:srcCompat="@drawable/card1" />

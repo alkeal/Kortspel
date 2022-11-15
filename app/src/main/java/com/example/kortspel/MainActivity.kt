@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
   val cardImages : IntArray = intArrayOf(
 
-      R.drawable.card1,
+      R.drawable.card7,
       R.drawable.card2,
       R.drawable.card3,
       R.drawable.card4,
