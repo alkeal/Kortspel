@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
-        android:text="Högre?"
+        android:text="Higher?"
         app:layout_constraintEnd_toStartOf="@+id/buttonLower"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
         android:layout_marginEnd="76dp"
-        android:text="Lägre?"
+        android:text="Lower?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,4 +35,14 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonHigher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCardView"
+        android:layout_width="352dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAppNameView"
+        app:srcCompat="@drawable/card1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
