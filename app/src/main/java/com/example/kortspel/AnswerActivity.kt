@@ -36,13 +36,13 @@ class AnswerActivity : AppCompatActivity() {
             if(higherCard == 1){
               imageWrongView.visibility = View.GONE
               imageRightView.visibility = View.VISIBLE
-              textRightView.visibility = View.VISIBLE
-              textWrongView.visibility = View.GONE
+                textWrongView.visibility = View.GONE
+                textRightView.visibility = View.VISIBLE
           } else {
               imageWrongView.visibility = View.VISIBLE
               imageRightView.visibility = View.GONE
-                textRightView.visibility = View.GONE
                 textWrongView.visibility = View.VISIBLE
+                textRightView.visibility = View.GONE
             }
 
         }
@@ -50,13 +50,14 @@ class AnswerActivity : AppCompatActivity() {
             if(lowerCard == 1){
                 imageWrongView.visibility = View.GONE
                 imageRightView.visibility = View.VISIBLE
-                textRightView.visibility = View.VISIBLE
                 textWrongView.visibility = View.GONE
+                textRightView.visibility = View.VISIBLE
+
             } else {
                 imageWrongView.visibility = View.VISIBLE
                 imageRightView.visibility = View.GONE
-                textRightView.visibility = View.GONE
                 textWrongView.visibility = View.VISIBLE
+                textRightView.visibility = View.GONE
             }
 
    }
@@ -66,12 +67,12 @@ class AnswerActivity : AppCompatActivity() {
     }
 fun restartGame(){
 
-   // val buttonRestart = findViewById<Button>(R.id.buttonRestart)
-  //  buttonRestart.setOnClickListener {
+   val buttonRestart = findViewById<Button>(R.id.buttonRestart)
+   buttonRestart.setOnClickListener {
 
 
-      //  val intent = Intent(this,MainActivity::class.java)
-      //  startActivity(intent)
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
 
 
 
@@ -81,7 +82,7 @@ fun restartGame(){
 }
 
 
-//}
+}
 
 
 
