@@ -7,12 +7,16 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import kotlin.random.Random
 
 class AnswerActivity : AppCompatActivity() {
 
 
     lateinit var imageRightView: ImageView
     lateinit var imageWrongView: ImageView
+    lateinit var textWrongView: TextView
+    lateinit var textRightView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +25,8 @@ class AnswerActivity : AppCompatActivity() {
     imageRightView = findViewById(R.id.imageRightView)
     imageWrongView = findViewById(R.id.imageWrongView)
 
+        textRightView = findViewById(R.id.textRightView)
+        textWrongView = findViewById(R.id.textWrongView)
    //val intent = Intent(this,MainActivity::class.java)
         var intent : Intent
         intent = getIntent()
@@ -30,27 +36,52 @@ class AnswerActivity : AppCompatActivity() {
             if(higherCard == 1){
               imageWrongView.visibility = View.GONE
               imageRightView.visibility = View.VISIBLE
+              textRightView.visibility = View.VISIBLE
+              textWrongView.visibility = View.GONE
           } else {
               imageWrongView.visibility = View.VISIBLE
               imageRightView.visibility = View.GONE
-          }
+                textRightView.visibility = View.GONE
+                textWrongView.visibility = View.VISIBLE
+            }
 
         }
         else if (lowerCard != -1){
             if(lowerCard == 1){
                 imageWrongView.visibility = View.GONE
                 imageRightView.visibility = View.VISIBLE
+                textRightView.visibility = View.VISIBLE
+                textWrongView.visibility = View.GONE
             } else {
                 imageWrongView.visibility = View.VISIBLE
                 imageRightView.visibility = View.GONE
+                textRightView.visibility = View.GONE
+                textWrongView.visibility = View.VISIBLE
             }
-
 
    }
 
+ restartGame()
+
+    }
+fun restartGame(){
+
+   // val buttonRestart = findViewById<Button>(R.id.buttonRestart)
+  //  buttonRestart.setOnClickListener {
+
+
+      //  val intent = Intent(this,MainActivity::class.java)
+      //  startActivity(intent)
+
+
+
+        }
+
 
 }
 
 
+//}
 
-}
+
+

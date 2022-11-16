@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
   lateinit var textAppNameView: TextView
   lateinit var imageView: ImageView
 
+
   val cardImages : IntArray = intArrayOf(
 
       R.drawable.card7,
@@ -84,7 +85,6 @@ class MainActivity : AppCompatActivity() {
 
             buttonPressed()
         }
-
 
 
 
