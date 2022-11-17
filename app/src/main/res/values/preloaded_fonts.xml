@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/acme</item>
+        <item>@font/alike</item>
         <item>@font/chau_philomene_one</item>
         <item>@font/gothic_a1_semibold</item>
     </array>

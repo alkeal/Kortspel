@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
 
   lateinit var textAppNameView: TextView
   lateinit var imageView: ImageView
+  lateinit var textPointsView: TextView
 
+ //var winCount = 2
 
   val cardImages : IntArray = intArrayOf(
 
@@ -40,13 +42,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-         textAppNameView = findViewById(R.id.textAppNameView)
+        var points = 0
+        textPointsView = findViewById(R.id.textPointsView)
+        textAppNameView = findViewById(R.id.textAppNameView)
 
          val buttonLower = findViewById<Button>(R.id.buttonLower)
 
          val buttonHigher = findViewById<Button>(R.id.buttonHigher)
-
          var cardValue = 1
         val random = kotlin.random.Random
         imageView = findViewById(R.id.imageCardView)
@@ -58,30 +60,33 @@ class MainActivity : AppCompatActivity() {
            val randomValue = random.nextInt(cardImages.size)
             if ( randomValue < cardValue){
                 answer = 1
+                points = points + 1
+                textPointsView.text = points.toString()
             }
             intent.putExtra("AnswerLower",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
 
             startActivity(intent)
-           // buttonPressed()
 
         }
 
         buttonHigher.setOnClickListener {
             var answer = 0
+
             val intent = Intent(this,AnswerActivity::class.java)
             val randomValue = random.nextInt(cardImages.size)
 
             if ( randomValue > cardValue){
                   answer = 1
+                points = points + 1
+                textPointsView.text = points.toString()
             }
 
             intent.putExtra("AnswerHigher",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
-
-             startActivity(intent)
+            startActivity(intent)
 
             buttonPressed()
         }
