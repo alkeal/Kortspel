@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
   lateinit var imageView: ImageView
   lateinit var textPointsView: TextView
 
- //var winCount = 2
+
 
   val cardImages : IntArray = intArrayOf(
 
@@ -39,20 +39,33 @@ class MainActivity : AppCompatActivity() {
       R.drawable.card13,
   )
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var points = 0
+
+        var savedCardValue = getIntent()
+
+        var cardValue = savedCardValue.getIntExtra("LastCardValue",-1)
+        if(cardValue == -1){
+            cardValue = 1
+
+        }
+      Log.d("!!!",cardValue.toString())
+
+        var points = savedCardValue.getIntExtra("LastPoint",0)
         textPointsView = findViewById(R.id.textPointsView)
         textAppNameView = findViewById(R.id.textAppNameView)
 
          val buttonLower = findViewById<Button>(R.id.buttonLower)
 
          val buttonHigher = findViewById<Button>(R.id.buttonHigher)
-         var cardValue = 1
         val random = kotlin.random.Random
         imageView = findViewById(R.id.imageCardView)
+        imageView.setImageResource(cardImages[cardValue-1])
 
+
+        textPointsView.text = "Your points: " + points.toString()
         buttonLower.setOnClickListener {
             // 0 = av , 1 = på
             var answer = 0
@@ -61,11 +74,13 @@ class MainActivity : AppCompatActivity() {
             if ( randomValue < cardValue){
                 answer = 1
                 points = points + 1
-                textPointsView.text = points.toString()
+                intent.putExtra("LastPoint",points)
+               // textPointsView.text = points.toString()
             }
             intent.putExtra("AnswerLower",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
+            intent.putExtra("CardValue",cardValue)
 
             startActivity(intent)
 
@@ -80,31 +95,24 @@ class MainActivity : AppCompatActivity() {
             if ( randomValue > cardValue){
                   answer = 1
                 points = points + 1
-                textPointsView.text = points.toString()
+                intent.putExtra("LastPoint",points)
+               // textPointsView.text = points.toString()
             }
-
             intent.putExtra("AnswerHigher",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
+            intent.putExtra("CardValue",cardValue)
+
             startActivity(intent)
 
-            buttonPressed()
         }
 
 
-
-
-
-    }
-
-    fun buttonPressed(){
-
-
-
-
-
-
-
-
-    }
 }
+
+
+
+
+
+
+        }

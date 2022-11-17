@@ -8,9 +8,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import kotlin.random.Random
 
 class AnswerActivity : AppCompatActivity() {
+
+    lateinit var intentValue : Intent
 
 
     lateinit var imageRightView: ImageView
@@ -28,7 +31,6 @@ class AnswerActivity : AppCompatActivity() {
         textRightView = findViewById(R.id.textRightView)
         textWrongView = findViewById(R.id.textWrongView)
    //val intent = Intent(this,MainActivity::class.java)
-        var intent : Intent
         intent = getIntent()
         var higherCard = intent.getIntExtra("AnswerHigher",-1)
         var lowerCard = intent.getIntExtra("AnswerLower",-1)
@@ -61,25 +63,36 @@ class AnswerActivity : AppCompatActivity() {
             }
 
    }
+   if (higherCard != -1|| lowerCard != -1){
+        var savedCardValue = intent.getIntExtra("CardValue", -1)
+         var savedPointsValue = intent.getIntExtra("LastPoint",0)
+       restartGame(savedCardValue, savedPointsValue)
 
- restartGame()
+
+   }
 
     }
-fun restartGame(){
+
+
+
+
+fun restartGame(cardValue : Int, points : Int ){
+
+   if (cardValue != -1){
 
    val buttonRestart = findViewById<Button>(R.id.buttonRestart)
    buttonRestart.setOnClickListener {
 
-
         val intent = Intent(this,MainActivity::class.java)
-          super.onPause()
+       intent.putExtra("LastCardValue", cardValue)
+       intent.putExtra("LastPoint",points)
        startActivity(intent)
 
 
 
         }
 
-
+   }
 }
 
 
