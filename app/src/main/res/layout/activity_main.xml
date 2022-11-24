@@ -30,15 +30,19 @@
 
     <TextView
         android:id="@+id/textAppNameView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:fontFamily="@font/gothic_a1_semibold"
+        android:layout_width="274dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="@font/bungee_shade"
         android:lineSpacingExtra="20sp"
         android:text="Higher? Lower?"
-        android:textSize="16sp"
+        android:textColor="#0C0B0B"
+        android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageCardView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,13 +59,13 @@
 
     <TextView
         android:id="@+id/textPointsView"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
+        android:layout_width="197dp"
+        android:layout_height="32dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="304dp"
         android:layout_marginBottom="18dp"
-        android:fontFamily="@font/gothic_a1_semibold"
+        android:fontFamily="@font/bungee_shade"
         android:text="Your points: "
         android:textSize="14sp"
         android:textStyle="bold"
@@ -70,5 +74,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

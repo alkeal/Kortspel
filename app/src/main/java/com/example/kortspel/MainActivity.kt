@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             cardValue = 1
 
         }
-      Log.d("!!!",cardValue.toString())
+            Log.d("!!!",cardValue.toString())
 
         var points = savedCardValue.getIntExtra("LastPoint",0)
         textPointsView = findViewById(R.id.textPointsView)
@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
 
+
         }
 
         buttonHigher.setOnClickListener {
@@ -108,11 +109,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-}
-
-
-
-
 
 
         }
+
+
+
+
+}
