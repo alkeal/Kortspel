@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
   lateinit var textPointsView: TextView
 
 
-
   val cardImages : IntArray = intArrayOf(
 
       R.drawable.card7,
@@ -108,6 +107,22 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        textAppNameView.setOnClickListener {
+
+            textAppNameView.animate().apply {
+
+                duration = 1000
+                rotationYBy(360f)
+            } .withEndAction{
+                textAppNameView.animate().apply {
+                    duration = 1000
+                    rotationXBy(3600f)
+
+                }.start()
+            }
+
+
+        }
 
 
 
