@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         imageView.setImageResource(cardImages[cardValue-1])
 
 
-        textPointsView.text = "Your points: " + points.toString()
+        textPointsView.text = "Dina poäng: " + points.toString()
         buttonLower.setOnClickListener {
             // 0 = av , 1 = på
             var answer = 0
