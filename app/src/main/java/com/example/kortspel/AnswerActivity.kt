@@ -3,20 +3,15 @@ package com.example.kortspel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
-import androidx.core.graphics.alpha
-import kotlin.random.Random
+
 
 class AnswerActivity : AppCompatActivity() {
 
-    lateinit var intentValue : Intent
+    lateinit var  intentValue : Intent
 
 
     lateinit var imageRightView: ImageView
@@ -35,8 +30,8 @@ class AnswerActivity : AppCompatActivity() {
         textWrongView = findViewById(R.id.textWrongView)
 
         intent = getIntent()
-        var higherCard = intent.getIntExtra("AnswerHigher",-1)
-        var lowerCard = intent.getIntExtra("AnswerLower",-1)
+        val higherCard = intent.getIntExtra("AnswerHigher",-1)
+        val lowerCard = intent.getIntExtra("AnswerLower",-1)
         if (higherCard != -1){
             if(higherCard == 1){
               imageWrongView.visibility = View.GONE
@@ -67,8 +62,8 @@ class AnswerActivity : AppCompatActivity() {
 
    }
    if (higherCard != -1|| lowerCard != -1){
-        var savedCardValue = intent.getIntExtra("CardValue", -1)
-         var savedPointsValue = intent.getIntExtra("LastPoint",0)
+        val savedCardValue = intent.getIntExtra("CardValue", -1)
+         val savedPointsValue = intent.getIntExtra("LastPoint",0)
        restartGame(savedCardValue, savedPointsValue)
 
 

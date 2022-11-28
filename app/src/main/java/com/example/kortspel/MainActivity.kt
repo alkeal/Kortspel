@@ -2,16 +2,13 @@ package com.example.kortspel
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.Log.d
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
-import java.util.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
   private val cardImages : IntArray = intArrayOf(
 
-      R.drawable.card7,
+      R.drawable.card1,
       R.drawable.card2,
       R.drawable.card3,
       R.drawable.card4,
@@ -66,17 +63,16 @@ class MainActivity : AppCompatActivity() {
 
         textPointsView.text = "Dina poäng: " + points.toString()
         buttonLower.setOnClickListener {
-            // 0 = av , 1 = på
+            // 0 = fel , 1 = rätt
             var answer = 0
            val intent = Intent(this,AnswerActivity::class.java)
-           val randomValue = random.nextInt(cardImages.size)
+           val randomValue = random.nextInt(1,cardImages.size)
             if ( randomValue < cardValue){
                 answer = 1
                 points = points + 1
                 intent.putExtra("LastPoint",points)
-          //  } else  if (points == 3){
-             //   finish()
-        }
+            }
+
             intent.putExtra("AnswerLower",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
@@ -91,15 +87,15 @@ class MainActivity : AppCompatActivity() {
             var answer = 0
 
             val intent = Intent(this,AnswerActivity::class.java)
-            val randomValue = random.nextInt(cardImages.size)
+            val randomValue = random.nextInt(1,cardImages.size)
+            Log.d("random",randomValue.toString())
 
             if ( randomValue > cardValue){
                   answer = 1
                 points = points + 1
                 intent.putExtra("LastPoint",points)
-         //   } else if(points == 3){
-             //   finish()
             }
+
             intent.putExtra("AnswerHigher",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
