@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
   lateinit var textPointsView: TextView
 
 
-  val cardImages : IntArray = intArrayOf(
+  private val cardImages : IntArray = intArrayOf(
 
       R.drawable.card7,
       R.drawable.card2,
@@ -74,8 +74,9 @@ class MainActivity : AppCompatActivity() {
                 answer = 1
                 points = points + 1
                 intent.putExtra("LastPoint",points)
-               // textPointsView.text = points.toString()
-            }
+          //  } else  if (points == 3){
+             //   finish()
+        }
             intent.putExtra("AnswerLower",answer)
             cardValue = randomValue
             imageView.setImageResource(cardImages[cardValue-1])
@@ -96,7 +97,8 @@ class MainActivity : AppCompatActivity() {
                   answer = 1
                 points = points + 1
                 intent.putExtra("LastPoint",points)
-               // textPointsView.text = points.toString()
+         //   } else if(points == 3){
+             //   finish()
             }
             intent.putExtra("AnswerHigher",answer)
             cardValue = randomValue
@@ -123,6 +125,7 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
 
 
 

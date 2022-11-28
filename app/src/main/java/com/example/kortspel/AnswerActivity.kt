@@ -33,7 +33,7 @@ class AnswerActivity : AppCompatActivity() {
 
         textRightView = findViewById(R.id.textRightView)
         textWrongView = findViewById(R.id.textWrongView)
-   //val intent = Intent(this,MainActivity::class.java)
+
         intent = getIntent()
         var higherCard = intent.getIntExtra("AnswerHigher",-1)
         var lowerCard = intent.getIntExtra("AnswerLower",-1)
@@ -96,10 +96,36 @@ fun restartGame(cardValue : Int, points : Int ){
         }
 
    }
-}
 
 
-}
+
+    imageRightView.setOnClickListener {
+
+       imageRightView.animate().apply {
+
+            duration = 1000
+            rotationXBy(360f)
+        } .start()
+
+
+       }
+            imageWrongView.setOnClickListener {
+
+              imageWrongView.animate().apply {
+
+                    duration = 1000
+                    rotationYBy(360f)
+                } .start()
+
+              }
+
+
+    }
+
+
+    }
+
+
 
 
 

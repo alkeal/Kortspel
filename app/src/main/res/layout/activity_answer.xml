@@ -56,7 +56,7 @@
         android:fontFamily="@font/bungee_shade"
         android:shadowColor="#4CAF50"
 
-        android:text="Right guess!"
+        android:text="Rätt svar!"
         android:textColor="#19AC1F"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bungee_shade"
-        android:text="Wrong guess!"
+        android:text="Fel svar!"
         android:textColor="#ED0E0E"
         android:textSize="24sp"
 
