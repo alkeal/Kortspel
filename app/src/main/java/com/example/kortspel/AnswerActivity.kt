@@ -67,14 +67,11 @@ class AnswerActivity : AppCompatActivity() {
        restartGame(savedCardValue, savedPointsValue)
 
 
-   }
+    }
 
     }
 
-
-
-
-fun restartGame(cardValue : Int, points : Int ){
+    fun restartGame(cardValue : Int, points : Int ){
 
    if (cardValue != -1){
 
@@ -86,27 +83,22 @@ fun restartGame(cardValue : Int, points : Int ){
        intent.putExtra("LastPoint",points)
        startActivity(intent)
 
-
-
-        }
+     }
 
    }
 
-
-
     imageRightView.setOnClickListener {
-
-       imageRightView.animate().apply {
+        imageRightView.animate().apply {
 
             duration = 1000
             rotationXBy(360f)
         } .start()
 
 
-       }
-            imageWrongView.setOnClickListener {
+    }
 
-              imageWrongView.animate().apply {
+    imageWrongView.setOnClickListener {
+        imageWrongView.animate().apply {
 
                     duration = 1000
                     rotationYBy(360f)
@@ -114,11 +106,8 @@ fun restartGame(cardValue : Int, points : Int ){
 
               }
 
-
     }
-
-
-    }
+}
 
 
 
